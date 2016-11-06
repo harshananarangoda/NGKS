@@ -14,6 +14,7 @@ namespace NGKS.Entities
         public string Message { get; set; }
         public DateTime AddedDate { get; set; }
         public int UserID { get; set; }
+        public DateTime UpdateTime { get; set; }
 
         public virtual User User { get; set; }
         public virtual Post Post { get; set; }
