@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\CategoryConfiguration.cs" />
+    <Compile Include="Config\CommentConfiguration.cs" />
     <Compile Include="Config\EntityBaseConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
