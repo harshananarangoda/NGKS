@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NGKS.Entities
+namespace NGKS.Data.Infrastructure
 {
     /// <summary>
-    /// Interface: IEntityBase
+    /// Interface: IUnitOfWork
     /// </summary>
-    public interface IEntityBase
+    public interface IUnitOfWork
     {
         /// <summary>
-        /// Int: ID
+        /// Commit 
         /// </summary>
-        int ID { get; set; }
+        void Commit();
     }
 }

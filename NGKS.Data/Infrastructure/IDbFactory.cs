@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NGKS.Entities
+namespace NGKS.Data.Infrastructure
 {
     /// <summary>
-    /// Interface: IEntityBase
+    /// Interface: IDbFactory
     /// </summary>
-    public interface IEntityBase
+    public interface IDbFactory : IDisposable
     {
         /// <summary>
-        /// Int: ID
+        /// Init Implementation
         /// </summary>
-        int ID { get; set; }
+        /// <returns>NGKS context</returns>
+        NGKSContext Init();
     }
 }

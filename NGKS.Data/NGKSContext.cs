@@ -10,14 +10,18 @@ using System.Threading.Tasks;
 
 namespace NGKS.Data
 {
-    class NGKSContext : DbContext
+    /// <summary>
+    /// Class: NGKS Context
+    /// Extend By DbContext Class
+    /// </summary>
+    public class NGKSContext : DbContext
     {
         public NGKSContext() : base("NGKS")
         {
             Database.SetInitializer<NGKSContext>(null);
         }
 
-        #region Entity Setes
+        #region Entity Sets
 
         public IDbSet<User> UserSet { get; set; }
         public IDbSet<UserRole> UserRoleSet { get; set; }

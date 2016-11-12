@@ -56,6 +56,11 @@
     <Compile Include="Config\RoleConfiguration.cs" />
     <Compile Include="Config\UserConfiguration.cs" />
     <Compile Include="Config\UserRoleConfiguration.cs" />
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="NGKSContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
