@@ -52,6 +52,11 @@
     <Compile Include="Config\CategoryConfiguration.cs" />
     <Compile Include="Config\CommentConfiguration.cs" />
     <Compile Include="Config\EntityBaseConfiguration.cs" />
+    <Compile Include="Config\PostConfiguration.cs" />
+    <Compile Include="Config\RoleConfiguration.cs" />
+    <Compile Include="Config\UserConfiguration.cs" />
+    <Compile Include="Config\UserRoleConfiguration.cs" />
+    <Compile Include="NGKSContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

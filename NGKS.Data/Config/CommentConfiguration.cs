@@ -16,7 +16,7 @@ namespace NGKS.Data.Config
             Property(cm => cm.Message).IsRequired().HasMaxLength(500);
             Property(cm => cm.AddedDate).IsRequired();
             Property(cm => cm.UserID).IsRequired();
-            Property(cm => cm.UpdateTime);
+            Property(cm => cm.UpdateTime).IsOptional();
 
         }
     }
