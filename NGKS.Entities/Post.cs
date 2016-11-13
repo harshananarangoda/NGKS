@@ -88,10 +88,5 @@ namespace NGKS.Entities
         /// </summary>
         public virtual User User { get; set; }
         
-        /// <summary>
-        /// Navigation Property
-        /// ICollection<Comment>: Comments
-        /// </summary>
-        public virtual ICollection<Comment> Comments { get; set; }
     }
 }

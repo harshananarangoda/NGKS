@@ -23,7 +23,6 @@ namespace NGKS.Data.Config
             Property(c => c.CaptionURL).IsOptional();
             Property(c => c.UpVotes).IsOptional();
             Property(c => c.DownVotes).IsOptional();
-            HasMany(c => c.Comments).WithRequired(r => r.Post).HasForeignKey(r => r.PostID);
         }
     }
 }

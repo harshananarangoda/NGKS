@@ -57,11 +57,6 @@ namespace NGKS.Entities
         /// Post: Post
         /// </summary>
         public virtual Post Post { get; set; }
-
-        /// <summary>
-        /// Navigation Property
-        /// Comment: Parent Comment
-        /// </summary>
-        public virtual Comment ParentComment { get; set; }
+        
     }
 }
