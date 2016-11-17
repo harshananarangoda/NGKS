@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGKS.Entities", "NGKS.Entit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGKS.Data", "NGKS.Data\NGKS.Data.csproj", "{26AF7948-F1AE-405F-B9D1-FB6251E72118}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGKS.Services", "NGKS.Services\NGKS.Services.csproj", "{30769BC2-E230-4DC8-BE96-CDF337A4C3E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{26AF7948-F1AE-405F-B9D1-FB6251E72118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26AF7948-F1AE-405F-B9D1-FB6251E72118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26AF7948-F1AE-405F-B9D1-FB6251E72118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30769BC2-E230-4DC8-BE96-CDF337A4C3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30769BC2-E230-4DC8-BE96-CDF337A4C3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30769BC2-E230-4DC8-BE96-CDF337A4C3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30769BC2-E230-4DC8-BE96-CDF337A4C3E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
