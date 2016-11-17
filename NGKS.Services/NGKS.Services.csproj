@@ -42,6 +42,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NGKS.Data\NGKS.Data.csproj">
+      <Project>{26af7948-f1ae-405f-b9d1-fb6251e72118}</Project>
+      <Name>NGKS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NGKS.Entities\NGKS.Entities.csproj">
+      <Project>{216419e8-152f-4fc3-bba5-e8890a0de935}</Project>
+      <Name>NGKS.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
