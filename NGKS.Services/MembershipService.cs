@@ -25,6 +25,8 @@ namespace NGKS.Services
 
         #endregion
 
+        #region Constructors
+
         public MembershipService(IEntityRepository<User> userRepository, IEntityRepository<Role> roleRepository,
             IEntityRepository<UserRole> userRoleRepository, IEncryptionService encryptionService, IUnitOfWork unitOfWork)
         {
@@ -35,6 +37,57 @@ namespace NGKS.Services
             _unitOfWork = unitOfWork;
         }
 
+        #endregion
+
+        #region Private Helper Methods
+
+        /// <summary>
+        /// Add user role to the user helper method
+        /// </summary>
+        /// <param name="user">user</param>
+        /// <param name="roleID">role id</param>
+        private void AddUserToRole(User user, int roleID)
+        {
+            var role = _roleRepository.GetSingle(roleID);
+            if (role == null)
+                throw new ApplicationException("Role doesn't exists");
+
+            var userRole = new UserRole()
+            {
+                RoleID = role.ID,
+                UserID = user.ID
+            };
+            _userroleRepository.Add(userRole);
+        }
+        
+        /// <summary>
+        /// Check password valid or not
+        /// </summary>
+        /// <param name="user">user</param>
+        /// <param name="password">password</param>
+        /// <returns>bool (Password valid or not)</returns>
+        private bool IsPasswordValid(User user, string password)
+        {
+            return string.Equals(_encryptionService.EncryptedPassword(password,user.Salt),user.Password);
+        }
+
+        /// <summary>
+        /// Check user is valid
+        /// </summary>
+        /// <param name="user">user</param>
+        /// <param name="password">password</param>
+        /// <returns>bool (valid user or not)</returns>
+        private bool IsUserValid(User user,string password)
+        {
+            if (IsPasswordValid(user, password))
+            {
+                return !user.IsLocked;
+            }
+            return false;
+        }
+
+        #endregion
+        
         public User CreateUSer(string username, string email, string password, int[] roles)
         {
             throw new NotImplementedException();
