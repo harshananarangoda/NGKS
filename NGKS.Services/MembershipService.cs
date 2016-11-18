@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using NGKS.Entities;
 using NGKS.Data.Repositories;
 using NGKS.Data.Infrastructure;
+using NGKS.Data.Extensions;
 
 namespace NGKS.Services
 {
@@ -88,9 +89,48 @@ namespace NGKS.Services
 
         #endregion
         
+        /// <summary>
+        /// Add user 
+        /// </summary>
+        /// <param name="username">username</param>
+        /// <param name="email">email</param>
+        /// <param name="password">password</param>
+        /// <param name="roles">roles</param>
+        /// <returns>User</returns>
         public User CreateUSer(string username, string email, string password, int[] roles)
         {
-            throw new NotImplementedException();
+            var existsUser = _userRepository.GetSingleByUsername(username);
+
+            if (existsUser != null)
+                throw new Exception("Username already exists");
+
+            var passwordSalt = _encryptionService.CreateSalt();
+
+            var user = new User()
+            {
+                Username = username,
+                Salt = passwordSalt,
+                Email = email,
+                IsLocked = false,
+                Password = _encryptionService.EncryptedPassword(password, passwordSalt),
+                DateCreated = DateTime.Now
+            };
+
+            _userRepository.Add(user);
+
+            _unitOfWork.Commit();
+
+            if (roles != null || roles.Length > 0)
+            {
+                foreach (var role in roles)
+                {
+                    AddUserToRole(user, role);
+                }
+            }
+
+            _unitOfWork.Commit();
+
+            return user;
         }
 
         public User GetUser(int userID)
