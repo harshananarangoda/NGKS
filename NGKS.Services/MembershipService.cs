@@ -133,14 +133,36 @@ namespace NGKS.Services
             return user;
         }
 
+        /// <summary>
+        /// Get User
+        /// </summary>
+        /// <param name="userID">UserID</param>
+        /// <returns>User</returns>
         public User GetUser(int userID)
         {
-            throw new NotImplementedException();
+            return _userRepository.GetSingle(userID);
         }
 
+        /// <summary>
+        /// Get user roles for user
+        /// </summary>
+        /// <param name="username">username</param>
+        /// <returns>List<Role></returns>
         public List<Role> GetUserRoles(string username)
         {
-            throw new NotImplementedException();
+            List<Role> _result = new List<Role>();
+
+            var existingUser = _userRepository.GetSingleByUsername(username);
+
+            if(existingUser != null)
+            {
+                foreach(var role in existingUser.UserRoles)
+                {
+                    _result.Add(role.Role);
+                }
+            }
+
+            return _result.Distinct().ToList();
         }
 
         public MembershipCntext ValidateUser(string username, string password)
