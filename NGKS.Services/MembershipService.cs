@@ -8,6 +8,7 @@ using NGKS.Entities;
 using NGKS.Data.Repositories;
 using NGKS.Data.Infrastructure;
 using NGKS.Data.Extensions;
+using System.Security.Principal;
 
 namespace NGKS.Services
 {
@@ -165,9 +166,27 @@ namespace NGKS.Services
             return _result.Distinct().ToList();
         }
 
+        /// <summary>
+        /// Validate User
+        /// </summary>
+        /// <param name="username">username</param>
+        /// <param name="password">password</param>
+        /// <returns>Membership Context</returns>
         public MembershipContext ValidateUser(string username, string password)
         {
-            throw new NotImplementedException();
+            var membershipContext = new MembershipContext();
+
+            var user = _userRepository.GetSingleByUsername(username);
+            if (username != null && IsUserValid(user, password))
+            {
+                var userRoles = GetUserRoles(username);
+                membershipContext.User = user;
+
+                var identity = new GenericIdentity(user.Username);
+                membershipContext.Principal = new GenericPrincipal(identity, userRoles.Select(x => x.Name).ToArray());
+            }
+
+            return membershipContext;
         }
     }
 }
