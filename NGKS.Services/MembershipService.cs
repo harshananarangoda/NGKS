@@ -165,7 +165,7 @@ namespace NGKS.Services
             return _result.Distinct().ToList();
         }
 
-        public MembershipCntext ValidateUser(string username, string password)
+        public MembershipContext ValidateUser(string username, string password)
         {
             throw new NotImplementedException();
         }
