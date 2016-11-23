@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 
 namespace NGKS.Web.App_Start
 {
@@ -10,5 +11,10 @@ namespace NGKS.Web.App_Start
     /// </summary>
     public class Bootstrapper
     {
+        public static void Run()
+        {
+            // Autofac Config
+            AutofacWebapiConfig.Initialize(GlobalConfiguration.Configuration);
+        }
     }
 }

@@ -7,6 +7,8 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using NGKS.Web.App_Start;
+using System.Web.Optimization;
 
 namespace NGKS.Web
 {
@@ -14,10 +16,14 @@ namespace NGKS.Web
     {
         void Application_Start(object sender, EventArgs e)
         {
+            var config = GlobalConfiguration.Configuration;
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
+            WebApiConfig.Register(config);
+            Bootstrapper.Run();
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }
