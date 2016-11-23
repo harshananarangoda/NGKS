@@ -18,7 +18,7 @@ namespace NGKS.Services.Abstract
         /// <param name="username">username</param>
         /// <param name="password">password</param>
         /// <returns>MembershipCntext</returns>
-        MembershipCntext ValidateUser(string username, string password);
+        MembershipContext ValidateUser(string username, string password);
 
         /// <summary>
         /// Create a user
