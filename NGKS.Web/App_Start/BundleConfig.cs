@@ -58,10 +58,10 @@ namespace NGKS.Web.App_Start
                 "~/Scripts/spa/category/categoryCtrl.js",
                 "~/Scripts/spa/category/categoryAddCtrl.js",
                 "~/Scripts/spa/category/categoryEditCtrl.js",
-                "~/Scripts/spa/post/postCtrl.js",
-                "~/Scripts/spa/post/postAddCtrl.js",
-                "~/Scripts/spa/post/postDetailsCtrl.js",
-                "~/Scripts/spa/post/postEditCtrl.js"
+                "~/Scripts/spa/posts/postsCtrl.js",
+                "~/Scripts/spa/posts/addPostCtrl.js",
+                "~/Scripts/spa/posts/readPostCtrl.js",
+                "~/Scripts/spa/posts/editPostCtrl.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
