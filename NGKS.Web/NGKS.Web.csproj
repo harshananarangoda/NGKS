@@ -196,6 +196,7 @@
     <Content Include="Scripts\spa\layout\topBar.directive.js" />
     <Content Include="Scripts\spa\layout\topbar.html" />
     <Content Include="Scripts\spa\modules\common.ui.js" />
+    <Content Include="Scripts\spa\services\apiService.js" />
     <Content Include="Scripts\spa\services\notificationService.js" />
     <Content Include="Scripts\Vendors\angucomplete-alt.min.js" />
     <Content Include="Scripts\Vendors\angular-base64.js" />
