@@ -168,6 +168,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Vendors\angucomplete-alt.min.js" />
+    <Content Include="Scripts\Vendors\angular-base64.js" />
+    <Content Include="Scripts\Vendors\angular-cookies.js" />
+    <Content Include="Scripts\Vendors\angular-file-upload.js" />
+    <Content Include="Scripts\Vendors\angular-route.js" />
+    <Content Include="Scripts\Vendors\angular-validator.js" />
+    <Content Include="Scripts\Vendors\angular.js" />
+    <Content Include="Scripts\Vendors\bootstrap.js" />
+    <Content Include="Scripts\Vendors\jquery.fancybox-media.js" />
+    <Content Include="Scripts\Vendors\jquery.fancybox.js" />
+    <Content Include="Scripts\Vendors\jquery.js" />
+    <Content Include="Scripts\Vendors\jquery.raty.js" />
+    <Content Include="Scripts\Vendors\loading-bar.js" />
+    <Content Include="Scripts\Vendors\morris.js" />
+    <Content Include="Scripts\Vendors\raphael.js" />
+    <Content Include="Scripts\Vendors\toastr.js" />
+    <Content Include="Scripts\Vendors\ui-bootstrap-tpls-0.13.1.js" />
+    <Content Include="Scripts\Vendors\underscore.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +207,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\Vendors\respond.src.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -198,8 +217,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\css\" />
+    <Folder Include="Content\fonts\" />
+    <Folder Include="Content\images\posts\" />
+    <Folder Include="Content\images\raty\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\spa\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NGKS.Data\NGKS.Data.csproj">
