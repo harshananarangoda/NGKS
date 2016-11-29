@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NGKS.Web.Infrastructure.Mappings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,6 +16,8 @@ namespace NGKS.Web.App_Start
         {
             // Autofac Config
             AutofacWebapiConfig.Initialize(GlobalConfiguration.Configuration);
+            // Auto Mapper Config
+            AutoMapperConfiguration.Configure();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NGKS.Web.Infrastructure.Validators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -40,6 +41,11 @@ namespace NGKS.Web.Models
         /// Category ID
         /// </summary>
         public int CategoryID { get; set; }
+
+        /// <summary>
+        /// Category
+        /// </summary>
+        public string Category { get; set; }
 
         /// <summary>
         /// Post Created Date
