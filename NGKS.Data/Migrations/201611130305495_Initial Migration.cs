@@ -21,8 +21,8 @@ namespace NGKS.Data.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 50),
-                        Header = c.String(nullable: false, maxLength: 50),
+                        Name = c.String(nullable: false, maxLength: 250),
+                        Header = c.String(nullable: false, maxLength: 250),
                         Tags = c.String(nullable: false),
                         Content = c.String(nullable: false),
                         CategoryID = c.Int(nullable: false),
