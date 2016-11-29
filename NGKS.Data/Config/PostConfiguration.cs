@@ -11,8 +11,8 @@ namespace NGKS.Data.Config
     {
         public PostConfiguration()
         {
-            Property(c => c.Name).IsRequired().HasMaxLength(50);
-            Property(c => c.Header).IsRequired().HasMaxLength(50);
+            Property(c => c.Name).IsRequired().HasMaxLength(250);
+            Property(c => c.Header).IsRequired().HasMaxLength(250);
             Property(c => c.Tags).IsRequired();
             Property(c => c.Content).IsRequired();
             Property(c => c.CategoryID).IsRequired();
