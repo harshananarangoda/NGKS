@@ -36,6 +36,18 @@
                 templateUrl: "scripts/spa/posts/readpost.html",
                 controller: "readPostCtrl"
             })
+            .when("/categories", {
+                templateUrl: "scripts/spa/category/category.html",
+                controller: "categoriesCtrl"
+            })
+            .when("/categories/add", {
+                templateUrl: "scripts/spa/category/addcategory.html",
+                controller: "addCategoryCtrl"
+            })
+            .when("/categories/edit:id", {
+                templateUrl: "scripts/spa/category/editcategory.html",
+                controller: "editCategorCtrl"
+            })
             .otherwise({ redirectTo: "/" });
     };
 })();
