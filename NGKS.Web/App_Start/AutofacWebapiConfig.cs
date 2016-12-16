@@ -51,7 +51,7 @@ namespace NGKS.Web.App_Start
         /// <returns>IContainer</returns>
         private static IContainer RegisterServices(ContainerBuilder builder)
         {
-            builder.RegisterAssemblyModules(Assembly.GetExecutingAssembly());
+            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             // EF HomeCinemaContext
             builder.RegisterType<NGKSContext>()

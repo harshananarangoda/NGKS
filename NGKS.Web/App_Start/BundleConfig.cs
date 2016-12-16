@@ -51,6 +51,8 @@ namespace NGKS.Web.App_Start
                 "~/Scripts/spa/layout/customPager.directive.js",
                 "~/Scripts/spa/directives/rating.directive.js",
                 "~/Scripts/spa/directives/posts.directive.js",
+                "~/Scripts/spa/directives/tags.directive.js",
+                "~/Scripts/spa/directives/votesReadonly.directive.js",
                 "~/Scripts/spa/account/loginCtrl.js",
                 "~/Scripts/spa/account/registerCtrl.js",
                 "~/Scripts/spa/home/rootCtrl.js",
