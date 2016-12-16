@@ -18,7 +18,7 @@ namespace NGKS.Web.Controllers
     /// Class: CategoryController
     /// </summary>
     [Authorize(Roles = "Admin")]
-    [Route("api/categories")]
+    [RoutePrefix("api/categories")]
     public class CategoryController : ApiControllerBase
     {
         /// <summary>

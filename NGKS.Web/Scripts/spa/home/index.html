@@ -1,0 +1,61 @@
+﻿<hr />
+<div class="row">
+    <div class="col-md-8">
+        <div class="panel panel-primary" id="panelLatestMovies">
+            <div class="panel-heading">
+                <h3 class="panel-title">Latest Posts</h3>
+            </div>
+
+            <div class="panel-body">
+                <div ng-if="loadingPosts">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        <i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Loading movies...</label>
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <div class="col-xs-12 col-sm-6 movie" ng-repeat="post in latestPosts">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>{{post.Name}} </strong>
+                        </div>
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <tags tags="{{post.Tags}}"></tags>
+                                    <div><small>{{post.Content | limitTo: 120}}...</small></div>
+                                    <label class="label label-info">{{post.Category}}</label><br />
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <votes-readonly upvotes="{{post.UpVotes}}" downvotes="{{post.DownVotes}}"></votes-readonly>
+                            <a class="fancybox-media pull-right" ng-if="post.VideoURL" ng-href="{{post.VideoURL}}">Video<i class="fa fa-video-camera fa-fw"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-success" id="panelPostCategories">
+            <div class="panel-heading">
+                <h3 class="panel-title">Post Categories</h3>
+            </div>
+
+            <div class="panel-body">
+                <div ng-if="loadingCategories">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"><i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Loading categories..</label></div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <div id="categories-bar"></div>
+            </div>
+            <div class="panel-footer">
+                <p class="text-center"><em>Wanna add a new post? Head over to the add post form.</em></p>
+                <p class="text-center"><a ng-href="#/posts/add" class="btn btn-default">Add new Post</a></p>
+            </div>
+        </div>
+    </div>
+</div>

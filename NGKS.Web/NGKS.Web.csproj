@@ -190,6 +190,12 @@
     <Content Include="Content\images\raty\star-on.png" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\spa\app.js" />
+    <Content Include="Scripts\spa\directives\tags.directive.js" />
+    <Content Include="Scripts\spa\directives\tags.html" />
+    <Content Include="Scripts\spa\directives\votesReadonly.directive.js" />
+    <Content Include="Scripts\spa\directives\votesReadonly.html" />
+    <Content Include="Scripts\spa\home\index.html" />
+    <Content Include="Scripts\spa\home\indexCtrl.js" />
     <Content Include="Scripts\spa\home\rootCtrl.js" />
     <Content Include="Scripts\spa\layout\sideBar.directive.js" />
     <Content Include="Scripts\spa\layout\sidebar.html" />

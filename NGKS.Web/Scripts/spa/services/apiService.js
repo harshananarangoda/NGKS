@@ -3,7 +3,7 @@
 
     app.factory('apiService', apiService);
 
-    apiServie.$inject = ['$hhtp', '$location', 'notificationService', '$rootScope'];
+    apiService.$inject = ['$http', '$location', 'notificationService', '$rootScope'];
 
     function apiService($http, $location, notificationService, $rootScope) {
         var service = {
