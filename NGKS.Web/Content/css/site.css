@@ -264,3 +264,7 @@ ul.pagination > li
 .red {
     color: red;
 }
+
+.right-margin-3 {
+    margin-right: 5px;
+}
