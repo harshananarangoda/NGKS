@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201611130305495_Initial Migration.Designer.cs">
       <DependentUpon>201611130305495_Initial Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612141046152_Table-modification-12-14-2016.cs" />
+    <Compile Include="Migrations\201612141046152_Table-modification-12-14-2016.Designer.cs">
+      <DependentUpon>201612141046152_Table-modification-12-14-2016.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NGKSContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +89,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611130305495_Initial Migration.resx">
       <DependentUpon>201611130305495_Initial Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612141046152_Table-modification-12-14-2016.resx">
+      <DependentUpon>201612141046152_Table-modification-12-14-2016.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
